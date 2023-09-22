@@ -5,7 +5,7 @@ export default function MyPage({ products }) {
   const {user} = useAuth();
   
   //baseUrl should be your FRONTEGG_APP_URL from .env.local
-  const baseUrl =  'FRONTEGG_APP_URL'
+  const baseUrl =  process.env.NEXT_PUBLIC_FRONTEGG_APP_URL;
   
   const logout = () => {
     window.location.href = `${baseUrl}/account/logout`;
